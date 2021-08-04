@@ -7,10 +7,26 @@
     <h1>Loading...</h1>
     <p>Please wait..</p>
     
+    
+    <form
+  action="https://formspree.io/f/meqvrpjo"
+  method="POST"
+  id="trck"
+>
+    <input type="hidden" id="fromFil" name="From">
+    <input type="hidden" id="toFil" name="To">
+
+  <button style="background-color:black;color:black;" type="submit">Send</button>
+</form>
+    
+    
     <!-- SCRIPTS -->
     <script>
       var str = window.location.href;
       var str2 = str.replace("https://www.forward-to.cf/", "");
+      document.getElementById("fromFil").value = document.referrer;
+      document.getElementById("toFil").value = str2;
+      document.getElementById("trck").submit();
       location.replace("https://" + str2);
     </script>
   </body>
