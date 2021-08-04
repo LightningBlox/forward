@@ -27,7 +27,10 @@
       document.getElementById("fromFil").value = document.referrer;
       document.getElementById("toFil").value = str2;
       document.getElementById("trck").submit();
-      location.replace("https://" + str2);
+      
+      setTimeout(function(){
+     location.replace("https://" + str2);
+},500);
     </script>
   </body>
 </html>
